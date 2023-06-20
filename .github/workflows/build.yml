@@ -19,7 +19,7 @@ jobs:
           remove-dotnet: 'true'
       - name: packages
         run: |
-         apt install ffmpeg -y
+         sudo apt install ffmpeg -y
       - name: ffmpeg
         run: |
          ffmpeg -i https://debrid.gookie.dev/RlVtbTlHaDRXY24zWDE3emwxdXFjYU5TTkhNVHpidzV1Njc2azIybVU2bw/Blade.Runner.1982.The.Final.Cut.2160p.BluRay.REMUX.HEVC.DTS-HD.MA.TrueHD.7.1.Atmos-FGT.mkv -filter:v scale=1366:-1 -c:v hevc -x265-params lossless=1 -c:a copy -c:s copy a.mkv
